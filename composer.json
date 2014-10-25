@@ -10,7 +10,8 @@
     "license": "BSD-2-Clause",
     "autoload": {
         "psr-4": {
-            "FOA\\Responder_Bundle\\":"src/"
+            "FOA\\Responder_Bundle\\":"src/",
+            "FOA\\Responder_Bundle\\_Config\\":"config/"
         }
     },
     "extra": {
