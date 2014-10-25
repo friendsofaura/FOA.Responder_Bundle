@@ -1,0 +1,38 @@
+{
+    "name": "foa/responder-bundle",
+    "description": "Responder for action domain responder(adr) pattern",
+    "require": {
+        "php":"5.3.*",
+        "aura/web":"2.0.*",
+        "aura/accept":"2.0.*@dev",
+        "foa/html-view-bundle":"2.0.*",
+        "foa/domain-payload":"2.0.*@dev"
+    },
+    "license": "BSD-2-Clause",
+    "autoload": {
+        "psr-4": {
+            "FOA\\Responder\\":"src/"
+        }
+    },
+    "extra": {
+        "aura": {
+            "type": "bundle",
+            "config": {
+                "common": "FOA\\Responder\\_Config\\Common"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hari KT",
+            "email": "kthari85@gmail.com"
+        },
+        {
+            "name": "Paul M Jones",
+            "email": "pmjones88@gmail.com"
+        }
+    ]
+}
