@@ -2,7 +2,6 @@
     "name": "foa/responder-bundle",
     "description": "Responder for action domain responder(adr) pattern",
     "require": {
-        "php":"5.3.*",
         "aura/web":"2.0.*",
         "aura/accept":"2.0.*@dev",
         "foa/html-view-bundle":"2.0.*",
