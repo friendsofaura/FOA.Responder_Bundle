@@ -10,14 +10,14 @@
     "license": "BSD-2-Clause",
     "autoload": {
         "psr-4": {
-            "FOA\\Responder\\":"src/"
+            "FOA\\Responder_Bundle\\":"src/"
         }
     },
     "extra": {
         "aura": {
             "type": "bundle",
             "config": {
-                "common": "FOA\\Responder\\_Config\\Common"
+                "common": "FOA\\Responder_Bundle\\_Config\\Common"
             }
         },
         "branch-alias": {
