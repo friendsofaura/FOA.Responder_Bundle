@@ -2,10 +2,10 @@
     "name": "foa/responder-bundle",
     "description": "Responder for action domain responder(adr) pattern",
     "require": {
-        "aura/web":"2.0.*",
-        "aura/accept":"2.0.*@dev",
-        "foa/html-view-bundle":"2.0.*",
-        "foa/domain-payload":"2.0.*@dev"
+        "aura/web":"2.*",
+        "aura/accept":"2.*",
+        "foa/html-view-bundle":"2.*",
+        "foa/domain-payload":"1.*"
     },
     "license": "BSD-2-Clause",
     "autoload": {
@@ -22,7 +22,7 @@
             }
         },
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-develop-2": "1.0.x-dev"
         }
     },
     "authors": [

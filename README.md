@@ -10,8 +10,6 @@ This library requires PHP 5.3 or later, and has no userland dependencies.
 
 It is installable and autoloadable via Composer as [foa/responder-bundle](https://packagist.org/packages/foa/responder-bundle).
 
-Alternatively, [download a release](https://github.com/friendsofaura/FOA.Responder_Bundle/releases) or clone this repository, then require or include its _autoload.php_ file.
-
 ### Quality
 
 This library attempts to comply with [PSR-1][], [PSR-2][], and [PSR-4][]. If
