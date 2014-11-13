@@ -22,7 +22,7 @@
             }
         },
         "branch-alias": {
-            "dev-develop-2": "1.0.x-dev"
+            "dev-develop-2": "0.1.x-dev"
         }
     },
     "authors": [
