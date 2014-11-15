@@ -18,6 +18,11 @@
             "FOA\\Responder_Bundle\\_Config\\":"config/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "FOA\\Responder_Bundle\\": ["tests/unit/src/", "tests/integration/src/"]
+        }
+    },
     "extra": {
         "aura": {
             "type": "bundle",

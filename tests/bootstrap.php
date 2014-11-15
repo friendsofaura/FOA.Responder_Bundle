@@ -9,4 +9,3 @@ if (! is_readable($composer_autoload)) {
 }
 
 require $composer_autoload;
-require dirname(__DIR__) . '/autoload.php';
