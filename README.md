@@ -12,6 +12,10 @@ It is installable and autoloadable via Composer as [foa/responder-bundle](https:
 
 ### Quality
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/friendsofaura/FOA.Responder_Bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Responder_Bundle/)
+[![Code Coverage](https://scrutinizer-ci.com/g/friendsofaura/FOA.Responder_Bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/friendsofaura/FOA.Responder_Bundle/)
+[![Build Status](https://travis-ci.org/friendsofaura/FOA.Responder_Bundle.png?branch=master)](https://travis-ci.org/friendsofaura/FOA.Responder_Bundle)
+
 This library attempts to comply with [PSR-1][], [PSR-2][], and [PSR-4][]. If
 you notice compliance oversights, please send a patch via pull request.
 

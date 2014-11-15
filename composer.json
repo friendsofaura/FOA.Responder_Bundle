@@ -9,7 +9,7 @@
     "require-dev": {
         "foa/html-view-bundle":"2.*",
         "league/plates":"~3.0",
-        "mustache/mustache":"~1.0",
+        "mustache/mustache":"~2.0",
         "twig/twig":"~1.0"
     },
     "license": "BSD-2-Clause",
