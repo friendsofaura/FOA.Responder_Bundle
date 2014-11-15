@@ -100,8 +100,16 @@ $responder = new BrowseResponder($accept, $response, $renderer);
 
 ```
 <?php
+use FOA\DomainPayload\PayloadFactory;
+
+$payload_factory = new PayloadFactory();
+$payload = $payload_factory->found(array('name' => 'Hari KT'));
+$responder->setPayload($payload);
+
 $responder->__invoke();
 ```
+
+Calling __invoke will render and set the content on the response object. Now you can either use `Aura\Web\ResponseSender` to send the response, or any other library to set and send the response back.
 
 ### Inside Aura Project
 
