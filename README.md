@@ -6,9 +6,7 @@ AbstractResponder of [action domain responder](https://github.com/pmjones/adr) b
 
 ### Installation
 
-This library requires PHP 5.3 or later, and has no userland dependencies.
-
-It is installable and autoloadable via Composer as [foa/responder-bundle](https://packagist.org/packages/foa/responder-bundle).
+It is installable and autoloadable via composer as [foa/responder-bundle](https://packagist.org/packages/foa/responder-bundle).
 
 ### Quality
 
