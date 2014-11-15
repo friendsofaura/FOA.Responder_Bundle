@@ -90,7 +90,7 @@ abstract class AbstractResponder
     protected function renderView($view, $layout = null)
     {
         $data = $this->getPayload();
-        $content = $this->renderer->render($data, $view, $layout = null);
+        $content = $this->renderer->render($data, $view, $layout);
         $this->response->content->set($content);
     }
 
