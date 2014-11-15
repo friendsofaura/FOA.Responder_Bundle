@@ -1,11 +1,13 @@
 <?php
-namespace FOA\Responder_Bundle;
+namespace FOA\Responder_Bundle\Renderer;
 
-class MustacheRenderer implements RendererInterface
+use Mustache_Engine;
+
+class Mustache implements RendererInterface
 {
     protected $engine;
 
-    public function __construct($engine)
+    public function __construct(Mustache_Engine $engine)
     {
         $this->engine = $engine;
     }

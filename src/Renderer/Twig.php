@@ -1,11 +1,13 @@
 <?php
-namespace FOA\Responder_Bundle;
+namespace FOA\Responder_Bundle\Renderer;
 
-class PlatesRenderer implements RendererInterface
+use Twig_Environment;
+
+class Twig implements RendererInterface
 {
     protected $engine;
 
-    public function __construct($engine)
+    public function __construct(Twig_Environment $engine)
     {
         $this->engine = $engine;
     }

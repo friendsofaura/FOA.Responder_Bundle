@@ -1,5 +1,5 @@
 <?php
-namespace FOA\Responder_Bundle;
+namespace FOA\Responder_Bundle\Renderer;
 
 interface RendererInterface
 {

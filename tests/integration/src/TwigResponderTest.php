@@ -4,10 +4,11 @@ namespace FOA\Responder_Bundle;
 use Aura\Accept\AcceptFactory;
 use Aura\Web\WebFactory;
 use FOA\DomainPayload\PayloadFactory;
-use League\Plates\Engine;
-use FOA\Responder_Bundle\Renderer\Plates;
+use Twig_Environment;
+use Twig_Loader_Array;
+use FOA\Responder_Bundle\Renderer\Twig;
 
-class PlatesResponderTest extends \PHPUnit_Framework_TestCase
+class TwigResponderTest extends \PHPUnit_Framework_TestCase
 {
     protected $response;
 
@@ -21,11 +22,12 @@ class PlatesResponderTest extends \PHPUnit_Framework_TestCase
         $accept_factory = new AcceptFactory($_SERVER);
         $accept = $accept_factory->newInstance();
 
-        $templates = new Engine(__DIR__ . '/templates');
-        $renderer = new Plates($templates);
-
+        $loader = new Twig_Loader_Array(array(
+            'hello' => 'Hello {{ name }}'
+        ));
+        $twig = new Twig_Environment($loader);
+        $renderer = new Twig($twig);
         $this->responder = new FakeResponder($accept, $this->response, $renderer);
-
         $payload_factory = new PayloadFactory();
         $this->responder->setPayload($payload_factory->found(array('name' => 'Hari')));
     }

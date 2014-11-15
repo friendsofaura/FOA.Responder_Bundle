@@ -6,6 +6,7 @@ use Aura\Web\WebFactory;
 use FOA\DomainPayload\PayloadFactory;
 use Mustache_Engine;
 use Mustache_Loader_FilesystemLoader;
+use FOA\Responder_Bundle\Renderer\Mustache;
 
 class MustacheResponderTest extends \PHPUnit_Framework_TestCase
 {
@@ -24,7 +25,7 @@ class MustacheResponderTest extends \PHPUnit_Framework_TestCase
         $mustache = new Mustache_Engine(array(
             'loader' => new Mustache_Loader_FilesystemLoader(__DIR__.'/templates'),
         ));
-        $renderer = new MustacheRenderer($mustache);
+        $renderer = new Mustache($mustache);
 
         $this->responder = new FakeResponder($accept, $this->response, $renderer);
 
@@ -34,8 +35,7 @@ class MustacheResponderTest extends \PHPUnit_Framework_TestCase
 
     public function testRenderView()
     {
-        $this->markTestSkipped();
         $this->responder->__invoke();
-        $this->assertSame('Hello Hari', $this->response->content->get());
+        $this->assertSame('Hello Hari', trim($this->response->content->get()));
     }
 }

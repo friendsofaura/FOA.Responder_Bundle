@@ -4,6 +4,7 @@ namespace FOA\Responder_Bundle;
 use Aura\Web\Response;
 use Aura\Accept\Accept;
 use FOA\DomainPayload\PayloadInterface;
+use FOA\Responder_Bundle\Renderer\RendererInterface;
 
 abstract class AbstractResponder
 {
@@ -90,8 +91,7 @@ abstract class AbstractResponder
     protected function renderView($view, $layout = null)
     {
         $data = $this->getPayload();
-        $content = $this->renderer->render($data, $view, $layout);
-        $this->response->content->set($content);
+        $this->response->content->set($this->renderer->render($data, $view, $layout));
     }
 
     protected function notFound()

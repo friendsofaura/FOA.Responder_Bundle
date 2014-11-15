@@ -6,8 +6,9 @@ use Aura\Html\HelperLocatorFactory;
 use Aura\View\ViewFactory;
 use Aura\Web\WebFactory;
 use FOA\DomainPayload\PayloadFactory;
+use FOA\Responder_Bundle\Renderer\AuraView;
 
-class AuraResponderTest extends \PHPUnit_Framework_TestCase
+class AuraViewResponderTest extends \PHPUnit_Framework_TestCase
 {
     protected $response;
 
@@ -30,10 +31,8 @@ class AuraResponderTest extends \PHPUnit_Framework_TestCase
             echo "Hello " . $this->name;
         });
 
-        $renderer = new AuraRenderer($view);
-
+        $renderer = new AuraView($view);
         $this->responder = new FakeResponder($accept, $this->response, $renderer);
-
         $payload_factory = new PayloadFactory();
         $this->responder->setPayload($payload_factory->found(array('name' => 'Hari')));
     }
@@ -41,6 +40,6 @@ class AuraResponderTest extends \PHPUnit_Framework_TestCase
     public function testRenderView()
     {
         $this->responder->__invoke();
-        $this->assertSame('Hello Hari', $this->response->content->get());
+        $this->assertSame('Hello Hari', trim($this->response->content->get()));
     }
 }

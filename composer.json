@@ -8,14 +8,14 @@
     },
     "require-dev": {
         "foa/html-view-bundle":"2.*",
-        "league/plates":"3.*",
-        "mustache/mustache":"1.*"
+        "league/plates":"~3.0",
+        "mustache/mustache":"~1.0",
+        "twig/twig":"~1.0"
     },
     "license": "BSD-2-Clause",
     "autoload": {
         "psr-4": {
-            "FOA\\Responder_Bundle\\":"src/",
-            "FOA\\Responder_Bundle\\_Config\\":"config/"
+            "FOA\\Responder_Bundle\\":"src/"
         }
     },
     "autoload-dev": {
@@ -24,15 +24,15 @@
         }
     },
     "extra": {
-        "aura": {
-            "type": "bundle",
-            "config": {
-                "common": "FOA\\Responder_Bundle\\_Config\\Common"
-            }
-        },
         "branch-alias": {
             "dev-master": "0.2.x-dev"
         }
+    },
+    "suggest": {
+        "foa/html-view-bundle": "For integrating aura view and html seamlessly",
+        "league/plates":"For integrating plates templating",
+        "mustache/mustache":"For integrating bobthecow mustache",
+        "twig/twig":"For integrating twig"
     },
     "authors": [
         {
