@@ -4,8 +4,12 @@
     "require": {
         "aura/web":"2.*",
         "aura/accept":"2.*",
-        "foa/html-view-bundle":"2.*",
         "foa/domain-payload":"1.*"
+    },
+    "require-dev": {
+        "foa/html-view-bundle":"2.*",
+        "league/plates":"3.*",
+        "mustache/mustache":"1.*"
     },
     "license": "BSD-2-Clause",
     "autoload": {
@@ -22,7 +26,7 @@
             }
         },
         "branch-alias": {
-            "dev-develop-2": "0.1.x-dev"
+            "dev-master": "0.2.x-dev"
         }
     },
     "authors": [

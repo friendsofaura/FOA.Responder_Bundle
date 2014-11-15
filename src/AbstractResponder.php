@@ -1,7 +1,6 @@
 <?php
 namespace FOA\Responder_Bundle;
 
-use Aura\View\View;
 use Aura\Web\Response;
 use Aura\Accept\Accept;
 use FOA\DomainPayload\PayloadInterface;
@@ -18,16 +17,16 @@ abstract class AbstractResponder
 
     protected $payload_method = array();
 
-    protected $view;
+    protected $renderer;
 
     public function __construct(
         Accept $accept,
         Response $response,
-        View $view
+        RendererInterface $renderer
     ) {
         $this->accept = $accept;
         $this->response = $response;
-        $this->view = $view;
+        $this->renderer = $renderer;
         $this->init();
     }
 
@@ -55,10 +54,18 @@ abstract class AbstractResponder
 
     protected function notRecognized()
     {
-        $domain_status = $this->payload->get('status');
+        $domain_status = $this->getPayload('status');
         $this->response->status->set('500');
         $this->response->content->set("Unknown domain payload status: '$domain_status'");
         return $this->response;
+    }
+
+    protected function getPayload($key = null)
+    {
+        if ($this->payload) {
+            return $this->payload->get($key);
+        }
+        return null;
     }
 
     protected function negotiateMediaType()
@@ -82,15 +89,9 @@ abstract class AbstractResponder
 
     protected function renderView($view, $layout = null)
     {
-        $content_type = $this->response->content->getType();
-        if ($content_type) {
-            $view .= $this->available[$content_type];
-        }
-
-        $this->view->setView($view);
-        $this->view->setLayout($layout);
-        $this->view->addData($this->payload->get());
-        $this->response->content->set($this->view->__invoke());
+        $data = $this->getPayload();
+        $content = $this->renderer->render($data, $view, $layout = null);
+        $this->response->content->set($content);
     }
 
     protected function notFound()
@@ -101,8 +102,13 @@ abstract class AbstractResponder
 
     protected function error()
     {
-        $e = $this->payload->get('exception');
+        $e = $this->getPayload('exception');
         $this->response->status->set('500');
-        $this->response->content->set($e->getMessage());
+        if ($e) {
+            $message = $e->getMessage();
+        } else {
+            $message = "Internal server error";
+        }
+        $this->response->content->set($message);
     }
 }
