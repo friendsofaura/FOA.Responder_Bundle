@@ -31,7 +31,7 @@
     "suggest": {
         "foa/html-view-bundle": "For integrating aura view and html seamlessly",
         "league/plates":"For integrating plates templating",
-        "mustache/mustache":"For integrating bobthecow mustache",
+        "mustache/mustache":"For integrating Mustache.php",
         "twig/twig":"For integrating twig"
     },
     "authors": [
