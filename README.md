@@ -71,7 +71,8 @@ class BlogBrowseAction
                 array('title' => 'Some awesome content', 'author' => 'Justin'),
             )
         );
-        // Rather than the above code, you should actually do something like $payload = $this->domain->fetchPage($page, $paging);
+        // Rather than the above code, you should actually do something like
+        // $payload = $this->domain->fetchPage($page, $paging);
         $this->responder->setPayload($payload);
         return $this->responder->__invoke();
     }
@@ -142,7 +143,7 @@ $responder = new \Vendor\Blog\Web\Responder\BlogBrowseResponder($accept, $respon
 
 ### Rendering and Setting content to response
 
-```
+```php
 <?php
 use FOA\DomainPayload\PayloadFactory;
 
