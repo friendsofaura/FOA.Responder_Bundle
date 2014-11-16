@@ -14,7 +14,15 @@ class Mustache implements RendererInterface
 
     public function render($data, $view, $layout = null)
     {
-        $tpl = $this->engine->loadTemplate($view);
-        return $tpl->render($data);
+        if ($layout === null) {
+            return $this->engine->render($view, $data);
+        }
+
+        $engine = $this->engine;
+        $data['content'] = function () use ($engine, $view, $data) {
+            return $engine->render($view, $data);
+        };
+
+        return $this->engine->render($layout, $data);
     }
 }
