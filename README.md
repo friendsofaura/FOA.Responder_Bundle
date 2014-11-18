@@ -166,8 +166,10 @@ echo $response->content->get();
 In your project `config/Common.php` define method add the below lines.
 
 ```php
+$di->params['FOA\Responder_Bundle\Renderer\AuraView']['engine'] = $di->lazyNew('Aura\View\View');
+// responder
 $di->params['FOA\Responder_Bundle\AbstractResponder']['response'] = $di->lazyGet('aura/web-kernel:response');
-$di->params['FOA\Responder_Bundle\AbstractResponder']['renderer'] = $di->lazyNew('Aura\View\View');
+$di->params['FOA\Responder_Bundle\AbstractResponder']['renderer'] = $di->lazyNew('FOA\Responder_Bundle\Renderer\AuraView');
 $di->params['FOA\Responder_Bundle\AbstractResponder']['accept'] = $di->lazyNew('Aura\Accept\Accept');
 ```
 

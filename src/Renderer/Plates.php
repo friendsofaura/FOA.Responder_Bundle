@@ -16,4 +16,9 @@ class Plates implements RendererInterface
     {
         return $this->engine->render($view, $data);
     }
+
+    public function getEngine()
+    {
+        return $this->engine;
+    }
 }

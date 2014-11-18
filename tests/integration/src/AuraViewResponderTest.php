@@ -42,4 +42,14 @@ class AuraViewResponderTest extends \PHPUnit_Framework_TestCase
         $this->responder->__invoke();
         $this->assertSame('Hello Hari', trim($this->response->content->get()));
     }
+
+    public function testGetRenderer()
+    {
+        $this->assertInstanceOf('FOA\Responder_Bundle\Renderer\AuraView', $this->responder->getRenderer());
+    }
+
+    public function testGetEngine()
+    {
+        $this->assertInstanceOf('Aura\View\View', $this->responder->getRenderer()->getEngine());
+    }
 }

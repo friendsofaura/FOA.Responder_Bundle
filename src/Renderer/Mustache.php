@@ -25,4 +25,9 @@ class Mustache implements RendererInterface
 
         return $this->engine->render($layout, $data);
     }
+
+    public function getEngine()
+    {
+        return $this->engine;
+    }
 }

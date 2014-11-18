@@ -53,6 +53,11 @@ abstract class AbstractResponder
         $this->payload = $payload;
     }
 
+    public function getRenderer()
+    {
+        return $this->renderer;
+    }
+
     protected function notRecognized()
     {
         $domain_status = $this->getPayload('status');

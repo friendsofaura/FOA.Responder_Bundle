@@ -1,3 +1,8 @@
+# 0.3.0 : 18 Nov 2014
+
+1. BC : Added `getEngine()` to `FOA\Responder_Bundle\Renderer\RendererInterface`.
+1. BC : Added `getRenderer()` to `FOA\Responder_Bundle\AbstractResponder`.
+
 # 0.2.0 : 15 Nov 2014
 
 1. Changed to make use of `FOA\Responder_Bundle\Renderer\RendererInterface`.

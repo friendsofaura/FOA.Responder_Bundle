@@ -19,4 +19,9 @@ class AuraView implements RendererInterface
         $this->engine->addData($data);
         return $this->engine->__invoke();
     }
+
+    public function getEngine()
+    {
+        return $this->engine;
+    }
 }
