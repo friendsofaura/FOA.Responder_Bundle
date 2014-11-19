@@ -1,4 +1,4 @@
-# FOA.Resonder_Bundle
+# FOA.Responder_Bundle
 
 AbstractResponder of [action domain responder](https://github.com/pmjones/adr) by Paul M Jones.
 
