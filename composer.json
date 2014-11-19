@@ -10,7 +10,8 @@
         "foa/html-view-bundle":"2.*",
         "league/plates":"~3.0",
         "mustache/mustache":"~2.0",
-        "twig/twig":"~1.0"
+        "twig/twig":"~1.0",
+        "smarty/smarty": "~3.1"
     },
     "license": "BSD-2-Clause",
     "autoload": {
