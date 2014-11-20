@@ -32,7 +32,7 @@ To ask questions, provide feedback, or otherwise communicate with the Aura commu
 
 ## Example usage
 
-It is recommend you first go through the [action domain responder](pmjones.github.io/adr/) paper and [example code](https://github.com/pmjones/adr/tree/master/example-code).
+It is recommend you first go through the [action domain responder](https://pmjones.github.io/adr/) paper and [example code](https://github.com/pmjones/adr/tree/master/example-code).
 
 In this examples we are using few aura components, but `foa/responder-bundle` is not specifically for Aura framework. You can integrate in any framework if you like the concept using its classes.
 
