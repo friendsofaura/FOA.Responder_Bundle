@@ -112,7 +112,7 @@ class BlogBrowseResponder extends AbstractResponder
 }
 ```
 
-First instantiate your templating engine of choice. Eg usage with [Aura.View](https://github.com/auraphp/Aura.View). See [other templating engines supported below](https://github.com/friendsofaura/FOA.Responder_Bundle#integrated-templating-engines).
+First instantiate your templating engine of choice. Eg usage with [Aura.View](https://github.com/auraphp/Aura.View). See [other templating engines supported below](#integrated-templating-engines).
 
 ```php
 <?php
@@ -183,6 +183,7 @@ Responder bundle integrates below templating engines. Feel free to choose the on
 1. [league/plates](https://github.com/thephpleague/Plates)
 1. [mustache/mustache](https://github.com/bobthecow/mustache.php)
 1. [twig/twig](https://github.com/twigphp/Twig)
+1. [smarty/smarty](https://github.com/smarty-php/smarty)
 
 ## Integrating other templating engines
 
