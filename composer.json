@@ -26,14 +26,15 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.3.x-dev"
+            "dev-master": "0.4.x-dev"
         }
     },
     "suggest": {
         "foa/html-view-bundle": "For integrating aura view and html seamlessly",
         "league/plates":"For integrating plates templating",
         "mustache/mustache":"For integrating Mustache.php",
-        "twig/twig":"For integrating twig"
+        "twig/twig":"For integrating twig",
+        "smarty/smarty": "For integrating smarty"
     },
     "authors": [
         {
@@ -43,6 +44,10 @@
         {
             "name": "Paul M Jones",
             "email": "pmjones88@gmail.com"
+        },
+        {
+            "name": "FOA.Responder_Bundle Contributors",
+            "homepage": "https://github.com/friendsofaura/FOA.Responder_Bundle/contributors"
         }
     ]
 }
