@@ -2,6 +2,7 @@
 
 namespace FOA\Responder_Bundle\Renderer;
 
+use InvalidArgumentException;
 use Smarty as SmartyEngine;
 
 /**
@@ -46,8 +47,8 @@ class Smarty implements RendererInterface
     {
         $extension = (string) $extension;
         $extension = trim($extension);
-        if ('.' != $extension[0]) {
-            $extension = '.'.$extension;
+        if ('.' == $extension[0]) {
+            $extension = substr($extension, 1);
         }
 
         $this->extension = $extension;
@@ -94,13 +95,13 @@ class Smarty implements RendererInterface
     public function render($data, $view, $layout = null)
     {
         $this->engine->assign((array) $data);
-        $content = $this->engine->fetch($view.$this->extension);
+        $content = $this->engine->fetch($view.'.'.$this->extension);
         if (is_null($layout)) {
             return $content;
         }
         $this->engine->assign($this->layoutVariableName, $content);
 
-        return $this->engine->fetch($layout.$this->extension);
+        return $this->engine->fetch($layout.'.'.$this->extension);
     }
 
     /**
